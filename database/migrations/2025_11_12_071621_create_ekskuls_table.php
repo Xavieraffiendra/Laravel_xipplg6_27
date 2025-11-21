@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ekskul', function (Blueprint $table) {
+        Schema::create('ekskuls', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_ekskul')->unique();
+            $table->string('nama_ekskul');
             $table->string('pembina');
             $table->enum('hari', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']);
-            $table->string('jam')->unique();
+            $table->string('jam');
             $table->string('keterangan');
             $table->timestamps();
         });
